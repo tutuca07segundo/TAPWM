@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input" value="">
+    <br>
+    <label >maiuscula</label>
+    <input type="radio" id="Radio-btn-1" name="switch-botao" onclick="maiuscula()">
+    <label >minuscula</label>
+    <input type="radio" id="Radio-btn-2" name="switch-botao" onclick="minuscula()">
+</body>
+<script>
+    function maiuscula(){        
+        texto = document.getElementById("input").value
+        document.getElementById("input").value = texto.toUpperCase()
+    }
+    function minuscula(){        
+        texto = document.getElementById("input").value
+        document.getElementById("input").value = texto.toLowerCase()
+    }
+
+</script>
+</html>
