@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <form  id="formId">
+        <label for="">nome > 10</label>
+        <input type="text" name="nome">
+        <br>
+        <label for="">Email > 2</label>
+        <input type="email" name="email">
+        <br>
+        <label for="">comentario > 20</label>
+        <input type="text" name="comment" style="width: 250px; height: 50px;">
+        <br>
+        <label for="">você ja pasou nessa pagina > *</label>
+        <br>
+        <label for="">sim</label>
+        <input type="radio" name="pesquisa">
+        <label for="">não</label>
+        <input type="radio" name="pesquisa">
+        <br>
+        <input type="submit" value="validar">
+
+
+    </form>
+<script>
+
+
+    const formPesquisa = document.getElementById("formId");
+    formPesquisa.addEventListener("submit", function(event){
+        
+        let nome = formPesquisa.elements['nome'].value;
+        let email = formPesquisa.elements['email'].value;
+        let comment = formPesquisa.elements['comment'].value;
+        const selectedRadio = document.querySelector('input[name="pesquisa"]:checked');
+        //alert( nome.length);
+        if(nome.length < 10){
+            alert("nome precisa ser maior que 10 caracteres")
+            event.preventDefault();
+        }
+        else if(email.length < 1){
+            alert("coloque algum email")
+            event.preventDefault();
+        }
+        else if( comment.length < 20){
+            alert("comentario precisa ter 20 caracteres")
+            event.preventDefault();
+        }
+        else if(selectedRadio == null){
+            alert("responda a pesquisa")
+            event.preventDefault();
+        }
+        else {
+            alert("form enviado")
+        }
+        
+
+        //event.preventDefault();  
+    });
+    
+</script>
+</body>
+</html>
