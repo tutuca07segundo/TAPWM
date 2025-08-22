@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class cursos {
+        constructor(nome,descricao){
+            this._nome = nome;
+            this._descricao = descricao;
+        }
+        get nome() {
+            return this._nome
+        }
+        get descricao(){
+            return this._descricao;
+        }
+    }
+    ads = new cursos("analise e desenvolvimeto de sistemas", "modalidade ams na fatec")
+    logistica = new cursos("logistica","modalidade ams na fatec")
+    polimeros = new cursos("polimeros","curso superior com duração de 6 semestres no eixo de produção industrial")
+    
+    ListaCursos = [ads,logistica,polimeros]
+    ListaCursos.forEach(element => {
+        document.write("<Strong>curso :</Strong>" + element.nome + "</br>"
+            + "<Strong>descrição :</Strong>" + element.descricao + "</br>"
+        )
+    });
+</script>
+<body>
+    <label for="">pesquisar nome de curso</label></br>
+    <input type="text" id="nomePesquisa"></br>
+    <button onclick="pesquisarCurso()">pesquisar</button></br>
+    <h1>curso selecionado :</h1></br>
+    <strong id="caixaCurso"></strong>
+</body>
+<script>
+    function pesquisarCurso(){
+        let encontrou = false
+        nomePesquisa = document.getElementById("nomePesquisa").value;
+        ListaCursos.forEach(element => {
+            if (element.nome == nomePesquisa){
+                encontrou = true
+                document.getElementById("caixaCurso").innerHTML = "<Strong>curso :</Strong>" + element.nome + "</br>"
+            + "<Strong>descrição :</Strong>" + element.descricao + "</br>"
+            }
+        })
+        if (!encontrou){
+            document.getElementById("caixaCurso").innerHTML = "não encontrado"
+        }
+    }
+
+</script>
+</html>
