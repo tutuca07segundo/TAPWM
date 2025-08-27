@@ -1,0 +1,16 @@
+{
+  "name": "site_fatec",
+  "version": "1.0.0",
+  "description": "site da fatec sorocaba",
+  "license": "ISC",
+  "author": "Arthur",
+  "type": "commonjs",
+  "main": "callback1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
