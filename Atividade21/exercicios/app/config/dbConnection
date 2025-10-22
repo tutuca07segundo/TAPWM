@@ -1,0 +1,13 @@
+       const sql = require ('mssql');
+       module.exports = function();
+       const sqlConfig = {
+           user: 'BD2313018', //7 últimos dígitos do seu RA
+           password: 'Teste1234',
+           database: 'BD',
+           server: 'APOLO',
+           options: {
+               encrypt: false,
+               trustServerCertificate: true,
+           }
+       }
+       return sql.connect(sqlConfig)
