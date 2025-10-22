@@ -1,5 +1,5 @@
 let app = require('./app/config/server');
-
+/*
 let rotaHome = require('./app/routes/home')
 rotaHome(app)
 ;
@@ -14,7 +14,7 @@ rotaHistoria(app);
 
 let rotaProfessores = require('./app/routes/professores')
 rotaProfessores(app);
-
+*/
 app.listen(3000, function(){
     console.log("servidor iniciado");
 });
